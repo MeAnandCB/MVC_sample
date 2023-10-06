@@ -1,11 +1,16 @@
-class HomeScreenController {
-  List<String> myList = ["anand", "shihab", "", "", ""];
+import 'package:flutter/material.dart';
+import 'package:model_class_sample/model/my_name_model.dart';
 
-  void addName(String newName) {
-    myList.add(newName);
+class HomeScreenController {
+  List<MyNameModel> myNameList = [
+    MyNameModel(name: "shihab", containerColor: Colors.amber)
+  ];
+
+  void addName(MyNameModel newNameModel) {
+    myNameList.add(newNameModel);
   }
 
   void deleteName(int index) {
-    myList.removeAt(index);
+    myNameList.removeAt(index);
   }
 }
